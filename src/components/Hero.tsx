@@ -61,26 +61,26 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-16 flex items-center justify-center gap-8 text-muted-foreground"
+          className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-muted-foreground"
         >
           <div className="text-center">
             <p className="font-mono-data text-2xl font-semibold text-foreground">10+</p>
             <p className="text-sm">ans d'expérience</p>
           </div>
-          <div className="w-px h-8 bg-border" />
+          <div className="w-px h-8 bg-border hidden sm:block" />
           <div className="text-center">
             <p className="font-mono-data text-2xl font-semibold text-foreground">12+</p>
             <p className="text-sm">établissements</p>
           </div>
-          <div className="w-px h-8 bg-border" />
+          <div className="w-px h-8 bg-border hidden sm:block" />
           <div className="text-center">
             <p className="font-mono-data text-2xl font-semibold text-foreground">STAPS</p>
             <p className="text-sm">Licence APAS</p>
           </div>
-          <div className="w-px h-8 bg-border" />
+          <div className="w-px h-8 bg-border hidden sm:block" />
           <div className="text-center">
             <p className="font-mono-data text-2xl font-semibold text-foreground">DU</p>
-            <p className="text-sm">Nutrition</p>
+            <p className="text-sm">Nutrition & Maladies Métaboliques</p>
           </div>
         </motion.div>
       </div>
