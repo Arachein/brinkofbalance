@@ -23,9 +23,9 @@ const activities = [
   {
     icon: Brain,
     title: "Activité Physique Adaptée",
-    tagline: "Maintenir l'autonomie et prévenir les chutes.",
+    tagline: "Bouger ensemble, échanger et créer du lien.",
     description:
-      "Interventions en EHPAD, résidences services et structures médico-sociales. Maintien de l'autonomie et prévention des chutes.",
+      "Séances en groupe où l'on bouge tout en échangeant : chaque participant est sollicité pour favoriser le lien social autant que le bien-être physique. Interventions en EHPAD, résidences services et structures médico-sociales.",
     features: ["Séances en groupe", "Tous publics", "Matériel fourni"],
   },
 ];
