@@ -22,8 +22,8 @@ const Hero = () => {
           transition={{ duration: 0.6, ease, delay: 0.05 }}
           className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6"
         >
-          Retrouver son équilibre de vie,{" "}
-          <span className="text-primary">c'est reprendre la main sur son bien-être et son énergie au quotidien.</span>
+          Reprenez la main sur{" "}
+          <span className="text-primary">votre énergie et votre bien-être.</span>
         </motion.h1>
 
         <motion.p
