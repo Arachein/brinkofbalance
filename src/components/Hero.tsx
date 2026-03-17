@@ -22,8 +22,8 @@ const Hero = () => {
           transition={{ duration: 0.6, ease, delay: 0.05 }}
           className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6"
         >
-          L'équilibre n'est pas un état,{" "}
-          <span className="text-primary">c'est une discipline.</span>
+          Retrouver son équilibre de vie,{" "}
+          <span className="text-primary">c'est reprendre la main sur son bien-être et son énergie au quotidien.</span>
         </motion.h1>
 
         <motion.p
