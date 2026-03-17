@@ -63,9 +63,12 @@ const Activities = () => {
               <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                 <activity.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-2 tracking-tight">
+              <h3 className="text-xl font-semibold mb-1 tracking-tight">
                 {activity.title}
               </h3>
+              <p className="text-sm font-medium text-primary mb-3">
+                {activity.tagline}
+              </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 {activity.description}
               </p>
