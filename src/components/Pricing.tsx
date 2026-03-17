@@ -9,11 +9,11 @@ const plans = [
     title: "Accompagnement Nutrition",
     price: "70",
     unit: "€",
-    description: "RDV initial + livraison du protocole",
+    description: "2 rendez-vous inclus : bilan initial + remise du protocole avec explications",
     features: [
-      "Analyse complète de votre situation",
-      "Plan personnalisé détaillé",
-      "Objectifs, contraintes et préférences",
+      "RDV 1 : analyse complète de votre situation",
+      "RDV 2 : protocole personnalisé et explications",
+      "Objectifs, contraintes et préférences pris en compte",
     ],
   },
   {
