@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 
-const ease = [0.2, 0, 0, 1];
+const ease = [0.2, 0, 0, 1] as const;
 
 const Contact = () => {
   const [sent, setSent] = useState(false);

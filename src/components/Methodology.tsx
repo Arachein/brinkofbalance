@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const ease = [0.2, 0, 0, 1];
+const ease = [0.2, 0, 0, 1] as const;
 
 const steps = [
   {
