@@ -74,8 +74,13 @@ const Hero = () => {
           </div>
           <div className="w-px h-8 bg-border" />
           <div className="text-center">
-            <p className="font-mono-data text-2xl font-semibold text-foreground">APA</p>
-            <p className="text-sm">diplômé</p>
+            <p className="font-mono-data text-2xl font-semibold text-foreground">STAPS</p>
+            <p className="text-sm">Licence APAS</p>
+          </div>
+          <div className="w-px h-8 bg-border" />
+          <div className="text-center">
+            <p className="font-mono-data text-2xl font-semibold text-foreground">DU</p>
+            <p className="text-sm">Nutrition</p>
           </div>
         </motion.div>
       </div>
