@@ -7,6 +7,7 @@ const activities = [
   {
     icon: Dumbbell,
     title: "Coaching Sportif",
+    tagline: "Pour plus d'énergie au quotidien.",
     description:
       "Programmation personnalisée, biomécanique et prévention des blessures. Des séances conçues autour de votre physiologie pour des résultats mesurables.",
     features: ["Programme sur mesure", "Coaching à domicile", "Suivi régulier"],
@@ -14,6 +15,7 @@ const activities = [
   {
     icon: Apple,
     title: "Nutrition",
+    tagline: "Être plus à l'aise dans son corps.",
     description:
       "Rééquilibrage alimentaire sans frustration. Analyse de votre situation, protocole personnalisé et menus hebdomadaires adaptés.",
     features: ["Protocole personnalisé", "Menus hebdomadaires", "Suivi métabolique"],
@@ -21,6 +23,7 @@ const activities = [
   {
     icon: Brain,
     title: "Activité Physique Adaptée",
+    tagline: "Votre corps est votre meilleur allié.",
     description:
       "Interventions en EHPAD, résidences services et structures médico-sociales. Maintien de l'autonomie et prévention des chutes.",
     features: ["Séances en groupe", "Tous publics", "Matériel fourni"],
@@ -60,9 +63,12 @@ const Activities = () => {
               <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                 <activity.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold mb-2 tracking-tight">
+              <h3 className="text-xl font-semibold mb-1 tracking-tight">
                 {activity.title}
               </h3>
+              <p className="text-sm font-medium text-primary mb-3">
+                {activity.tagline}
+              </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 {activity.description}
               </p>
