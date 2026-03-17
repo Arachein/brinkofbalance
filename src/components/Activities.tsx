@@ -44,10 +44,46 @@ const Activities = () => {
           <p className="font-mono-data text-sm tracking-widest uppercase text-muted-foreground mb-3">
             Services
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-2">
             Une approche globale de votre santé
           </h2>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease }}
+          className="mb-6"
+        >
+          <p className="font-mono-data text-sm tracking-widest uppercase text-muted-foreground mb-3">
+            Particuliers
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {activities.filter((_, i) => i < 2).map((activity, i) => (
+            <ActivityCard key={activity.title} activity={activity} delay={i * 0.05} />
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease }}
+          className="mb-6"
+        >
+          <p className="font-mono-data text-sm tracking-widest uppercase text-muted-foreground mb-3">
+            Professionnels
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-1 max-w-xl gap-6">
+          {activities.filter((_, i) => i === 2).map((activity, i) => (
+            <ActivityCard key={activity.title} activity={activity} delay={i * 0.05} />
+          ))}
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {activities.map((activity, i) => (
