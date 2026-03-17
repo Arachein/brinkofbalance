@@ -7,17 +7,17 @@ const activities = [
   {
     icon: Dumbbell,
     title: "Coaching Sportif",
-    tagline: "Pour plus d'énergie au quotidien.",
+    tagline: "Moins de fatigue, plus d'énergie.",
     description:
-      "Programmation personnalisée, biomécanique et prévention des blessures. Des séances conçues autour de votre physiologie pour des résultats mesurables.",
+      "Du sport-santé pensé pour s'intégrer à votre quotidien, même avec un emploi du temps chargé. Programmation personnalisée, biomécanique et prévention des blessures.",
     features: ["Programme sur mesure", "Coaching à domicile", "Suivi régulier"],
   },
   {
     icon: Apple,
     title: "Nutrition",
-    tagline: "Être plus à l'aise dans son corps.",
+    tagline: "Se sentir mieux dans son corps, durablement.",
     description:
-      "Rééquilibrage alimentaire sans frustration. Analyse de votre situation, protocole personnalisé et menus hebdomadaires adaptés.",
+      "Rééquilibrage alimentaire sans frustration, adapté à vos contraintes. Analyse de votre situation, protocole personnalisé et menus hebdomadaires.",
     features: ["Protocole personnalisé", "Menus hebdomadaires", "Suivi métabolique"],
   },
   {
