@@ -23,7 +23,7 @@ const activities = [
   {
     icon: Brain,
     title: "Activité Physique Adaptée",
-    tagline: "Votre corps est votre meilleur allié.",
+    tagline: "Maintenir l'autonomie et prévenir les chutes.",
     description:
       "Interventions en EHPAD, résidences services et structures médico-sociales. Maintien de l'autonomie et prévention des chutes.",
     features: ["Séances en groupe", "Tous publics", "Matériel fourni"],
