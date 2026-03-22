@@ -1,34 +1,412 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brink of Balance — Coach Sport Santé &amp; Nutrition</title>
-    <meta name="description" content="Sylvain Godet, coach sport santé et nutrition. Accompagnement personnalisé, activité physique adaptée et nutrition scientifique dans les Alpes-Maritimes.">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brink of Balance — Coach Sport Santé & Nutrition</title>
+  <meta name="description" content="Sylvain Godet, coach sport santé et nutrition. Accompagnement personnalisé, activité physique adaptée et nutrition scientifique dans les Alpes-Maritimes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: hsl(210,20%,98%);
+      --fg: hsl(210,50%,10%);
+      --card: hsl(0,0%,100%);
+      --primary: hsl(160,84%,15%);
+      --primary-fg: hsl(0,0%,100%);
+      --primary-10: hsla(160,84%,15%,0.1);
+      --primary-15: hsla(160,84%,15%,0.15);
+      --secondary: hsl(210,10%,94%);
+      --secondary-fg: hsl(210,50%,10%);
+      --muted: hsl(210,10%,93%);
+      --muted-fg: hsl(210,12%,45%);
+      --accent: hsl(150,60%,50%);
+      --border: hsl(210,15%,90%);
+      --shadow-card: 0 0 0 1px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.05), 0 12px 24px rgba(0,0,0,.05);
+      --shadow-card-hover: 0 0 0 1px rgba(0,0,0,.03), 0 4px 8px rgba(0,0,0,.07), 0 16px 32px rgba(0,0,0,.07);
+      --radius: 0.75rem;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Inter', -apple-system, sans-serif; letter-spacing: -0.02em; }
+    a { text-decoration: none; color: inherit; }
+    .mono { font-family: 'Geist Mono', 'SF Mono', monospace; font-variant-numeric: tabular-nums; }
+    .container { max-width: 1024px; margin: 0 auto; }
+    .container-sm { max-width: 896px; margin: 0 auto; }
 
-    <!-- TODO: Update og:title to match your application name -->
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/XUwJsjHCLZXbcAx0L830prGFTEy2/social-images/social-1773774637358-Logo_V3.webp">
+    /* Header */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: hsla(210,20%,98%,0.8); backdrop-filter: blur(12px); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; }
+    .header-logo { font-weight: 600; font-size: 1.125rem; letter-spacing: -0.02em; }
+    .header-nav { display: flex; align-items: center; gap: 32px; }
+    .header-nav a { font-size: 0.875rem; color: var(--muted-fg); transition: color 0.2s; }
+    .header-nav a:hover { color: var(--fg); }
+    .btn-primary { background: var(--primary); color: var(--primary-fg); padding: 8px 20px; border-radius: 8px; font-size: 0.875rem; font-weight: 500; transition: opacity 0.2s; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-secondary { background: var(--secondary); color: var(--secondary-fg); padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 500; transition: background 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-secondary:hover { background: var(--muted); }
+    .mobile-menu-btn { display: none; padding: 8px; background: none; border: none; cursor: pointer; color: var(--fg); }
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/XUwJsjHCLZXbcAx0L830prGFTEy2/social-images/social-1773774637358-Logo_V3.webp">
-    <meta property="og:title" content="Brink of Balance — Coach Sport Santé &amp; Nutrition">
-  <meta name="twitter:title" content="Brink of Balance — Coach Sport Santé &amp; Nutrition">
-  <meta property="og:description" content="Sylvain Godet, coach sport santé et nutrition. Accompagnement personnalisé, activité physique adaptée et nutrition scientifique dans les Alpes-Maritimes.">
-  <meta name="twitter:description" content="Sylvain Godet, coach sport santé et nutrition. Accompagnement personnalisé, activité physique adaptée et nutrition scientifique dans les Alpes-Maritimes.">
+    /* Hero */
+    .hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; padding: 96px 24px; text-align: center; }
+    .hero-subtitle { font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-fg); margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 600; line-height: 1.1; margin-bottom: 24px; }
+    .hero h1 span { color: var(--primary); }
+    .hero-desc { font-size: clamp(1.125rem, 2vw, 1.25rem); color: var(--muted-fg); max-width: 640px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .hero-buttons .btn-primary { padding: 16px 32px; font-size: 1rem; }
+    .hero-stats { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px; margin-top: 64px; color: var(--muted-fg); }
+    .hero-stats .stat-value { font-size: 1.5rem; font-weight: 600; color: var(--fg); }
+    .hero-stats .stat-label { font-size: 0.875rem; }
+    .hero-stats .divider { width: 1px; height: 32px; background: var(--border); }
+    @media (max-width: 640px) { .hero-stats .divider { display: none; } }
+
+    /* Section common */
+    section { padding: 96px 24px; }
+    .section-label { font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-fg); margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.875rem, 4vw, 2.25rem); font-weight: 600; letter-spacing: -0.02em; }
+
+    /* Activities */
+    .cards-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .cards-grid-1 { display: grid; grid-template-columns: 1fr; max-width: 576px; gap: 24px; }
+    @media (max-width: 768px) { .cards-grid-2 { grid-template-columns: 1fr; } }
+    .activity-card { background: var(--card); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-card); transition: box-shadow 0.3s, transform 0.3s; }
+    .activity-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-4px); }
+    .card-icon { width: 40px; height: 40px; background: var(--primary-10); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .card-icon svg { width: 20px; height: 20px; color: var(--primary); }
+    .activity-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 4px; }
+    .activity-card .tagline { font-size: 0.875rem; font-weight: 500; color: var(--primary); margin-bottom: 12px; }
+    .activity-card p { color: var(--muted-fg); line-height: 1.7; margin-bottom: 24px; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .feature-list li { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: hsla(210,50%,10%,0.8); }
+    .feature-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* Methodology */
+    .methodology { background: hsla(210,10%,93%,0.5); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+    .step-number { font-size: 3rem; font-weight: 600; color: var(--primary-15); margin-bottom: 16px; }
+    .step h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; }
+    .step p { color: var(--muted-fg); line-height: 1.7; }
+
+    /* Pricing */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .pricing-card { background: var(--card); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
+    .pricing-card.highlighted { outline: 2px solid var(--primary); }
+    .pricing-card .plan-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-fg); margin-bottom: 16px; }
+    .pricing-card h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 4px; }
+    .pricing-card .plan-desc { font-size: 0.875rem; color: var(--muted-fg); margin-bottom: 24px; }
+    .pricing-card .price { font-size: 2.5rem; font-weight: 600; }
+    .pricing-card .price-unit { font-size: 0.875rem; color: var(--muted-fg); margin-left: 4px; }
+    .pricing-card .price-row { margin-bottom: 24px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
+    .check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.875rem; color: hsla(210,50%,10%,0.8); }
+    .check-icon { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .pricing-note { text-align: center; font-size: 0.875rem; color: var(--muted-fg); margin-top: 32px; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info h2 { margin-bottom: 24px; }
+    .contact-info > p { color: var(--muted-fg); line-height: 1.7; margin-bottom: 40px; }
+    .contact-links { display: flex; flex-direction: column; gap: 16px; }
+    .contact-link { display: flex; align-items: center; gap: 12px; color: hsla(210,50%,10%,0.8); transition: color 0.2s; }
+    .contact-link:hover { color: var(--fg); }
+    .contact-link .icon-box { width: 40px; height: 40px; background: var(--primary-10); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .contact-link .icon-box svg { width: 16px; height: 16px; color: var(--primary); }
+    .contact-link .link-label { font-size: 0.875rem; color: var(--muted-fg); }
+    .contact-link .link-value { font-size: 0.875rem; }
+    .contact-form { background: var(--card); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-card); display: flex; flex-direction: column; gap: 20px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px 16px; border-radius: 8px; background: var(--bg); border: none;
+      box-shadow: inset 0 0 0 1px var(--border); font-size: 0.875rem; font-family: inherit;
+      color: var(--fg); outline: none; transition: box-shadow 0.2s;
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--muted-fg); }
+    .contact-form input:focus, .contact-form textarea:focus { box-shadow: inset 0 0 0 2px var(--primary); }
+    .contact-form textarea { resize: none; min-height: 100px; }
+    .contact-form button { width: 100%; padding: 14px 24px; }
+
+    /* Footer */
+    footer { padding: 48px 24px; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .footer-brand p:first-child { font-weight: 600; letter-spacing: -0.02em; }
+    .footer-brand p:last-child { font-size: 0.875rem; color: var(--muted-fg); }
+    .footer-links { display: flex; align-items: center; gap: 24px; }
+    .footer-links a { font-size: 0.875rem; color: var(--muted-fg); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--fg); }
+  </style>
 </head>
+<body>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="header-logo">Brink of Balance</a>
+      <nav class="header-nav">
+        <a href="#activites">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-primary">Prendre RDV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container-sm">
+        <p class="mono hero-subtitle">Coach Sport Santé &amp; Nutrition</p>
+        <h1>Reprenez la main sur <span>votre énergie et votre bien-être.</span></h1>
+        <p class="hero-desc">Avec plus de 10 ans d'expérience, je vous accompagne avec une approche simple, scientifique et adaptée pour faire de votre corps un allié fiable.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Réserver un bilan initial &#8594;</a>
+          <a href="#activites" class="btn-secondary">Découvrir les services</a>
+        </div>
+        <div class="hero-stats">
+          <div style="text-align:center">
+            <p class="mono stat-value">10+</p>
+            <p class="stat-label">ans d'expérience</p>
+          </div>
+          <div class="divider"></div>
+          <div style="text-align:center">
+            <p class="mono stat-value">12+</p>
+            <p class="stat-label">établissements</p>
+          </div>
+          <div class="divider"></div>
+          <div style="text-align:center">
+            <p class="mono stat-value">STAPS</p>
+            <p class="stat-label">Licence APAS</p>
+          </div>
+          <div class="divider"></div>
+          <div style="text-align:center">
+            <p class="mono stat-value">DU</p>
+            <p class="stat-label">Nutrition &amp; Maladies Métaboliques</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="activites">
+      <div class="container">
+        <div style="margin-bottom:64px">
+          <p class="mono section-label">Services</p>
+          <h2 class="section-title">Une approche globale de votre santé</h2>
+        </div>
+
+        <p class="mono section-label" style="margin-bottom:24px">Particuliers</p>
+        <div class="cards-grid-2" style="margin-bottom:64px">
+
+          <div class="activity-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>
+            </div>
+            <h3>Coaching Sportif</h3>
+            <p class="tagline">Moins de fatigue, plus d'énergie.</p>
+            <p>Du sport-santé pensé pour s'intégrer à votre quotidien, même avec un emploi du temps chargé. Programmation personnalisée, biomécanique et prévention des blessures.</p>
+            <ul class="feature-list">
+              <li><span class="feature-dot"></span> Programme sur mesure</li>
+              <li><span class="feature-dot"></span> Coaching à domicile</li>
+              <li><span class="feature-dot"></span> Suivi régulier</li>
+            </ul>
+          </div>
+
+          <div class="activity-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg>
+            </div>
+            <h3>Nutrition</h3>
+            <p class="tagline">Se sentir mieux dans son corps, durablement.</p>
+            <p>Rééquilibrage alimentaire sans frustration, adapté à vos contraintes. Analyse de votre situation, protocole personnalisé et menus hebdomadaires.</p>
+            <ul class="feature-list">
+              <li><span class="feature-dot"></span> Protocole personnalisé</li>
+              <li><span class="feature-dot"></span> Menus hebdomadaires</li>
+              <li><span class="feature-dot"></span> Suivi métabolique</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mono section-label" style="margin-bottom:24px">Professionnels</p>
+        <div class="cards-grid-1">
+          <div class="activity-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg>
+            </div>
+            <h3>Activité Physique Adaptée</h3>
+            <p class="tagline">Bouger ensemble, échanger et créer du lien.</p>
+            <p>Séances en groupe où l'on bouge tout en échangeant : chaque participant est sollicité pour favoriser le lien social autant que le bien-être physique. Interventions en EHPAD, résidences services et structures médico-sociales.</p>
+            <ul class="feature-list">
+              <li><span class="feature-dot"></span> Séances en groupe</li>
+              <li><span class="feature-dot"></span> Tous publics</li>
+              <li><span class="feature-dot"></span> Matériel fourni</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Méthodologie -->
+    <section class="methodology">
+      <div class="container">
+        <div style="margin-bottom:64px">
+          <p class="mono section-label">Méthodologie</p>
+          <h2 class="section-title">Un processus structuré, des résultats durables</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <p class="mono step-number">01</p>
+            <h3>Rendez-vous initial</h3>
+            <p>Analyse complète de votre situation : besoins, objectifs, contraintes et préférences.</p>
+          </div>
+          <div class="step">
+            <p class="mono step-number">02</p>
+            <h3>Livraison du protocole</h3>
+            <p>Présentation et explication détaillée de votre plan personnalisé.</p>
+          </div>
+          <div class="step">
+            <p class="mono step-number">03</p>
+            <h3>Suivi et ajustements</h3>
+            <p>Mise en place d'actions supplémentaires selon vos besoins : coaching, menus hebdomadaires, etc.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section id="tarifs">
+      <div class="container">
+        <div style="margin-bottom:64px">
+          <p class="mono section-label">Tarifs</p>
+          <h2 class="section-title">Des formules claires, sans surprise</h2>
+        </div>
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <p class="mono plan-label">Particuliers</p>
+            <h3>Accompagnement Nutrition</h3>
+            <p class="plan-desc">2 rendez-vous inclus : bilan initial + remise du protocole avec explications</p>
+            <div class="price-row">
+              <span class="mono price">70</span><span class="price-unit">€</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> RDV 1 : analyse complète de votre situation</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> RDV 2 : protocole personnalisé et explications</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Objectifs, contraintes et préférences pris en compte</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card highlighted">
+            <p class="mono plan-label">Particuliers</p>
+            <h3>Coaching &amp; Suivi</h3>
+            <p class="plan-desc">Coaching à domicile, programme sportif, menus</p>
+            <div class="price-row">
+              <span class="mono price">50</span><span class="price-unit">€ / acte</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Coaching sportif à domicile</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Programme sur mesure</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Menus hebdomadaires</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Ajustements continus</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <p class="mono plan-label">Professionnels</p>
+            <h3>Intervention APA</h3>
+            <p class="plan-desc">Séances en établissement de santé</p>
+            <div class="price-row">
+              <span class="mono price">50</span><span class="price-unit">€ / heure</span>
+            </div>
+            <ul class="check-list">
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Séances d'1 heure, jusqu'à 15 participants</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Matériel entièrement fourni</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tous publics y compris UVP</li>
+              <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Sans frais de déplacement (2h min.)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">Chaque accompagnement est adapté à vos besoins. Possibilité d'ajustement tarifaire selon la fréquence et la durée d'engagement.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="mono section-label">Contact</p>
+            <h2 class="section-title">Prenons rendez-vous</h2>
+            <p>Votre coach sport santé &amp; nutrition — <strong>Sylvain GODET</strong>. Diplômé en coaching sportif et conseiller en nutrition.</p>
+            <div class="contact-links">
+              <a href="tel:+33783604139" class="contact-link">
+                <div class="icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="link-label">Téléphone</p>
+                  <p class="mono link-value">07 83 60 41 39</p>
+                </div>
+              </a>
+              <a href="https://wa.me/33783604139" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <div class="icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                </div>
+                <div>
+                  <p class="link-label">WhatsApp</p>
+                  <p class="mono link-value">Envoyer un message</p>
+                </div>
+              </a>
+              <a href="mailto:godet.sylvain.apa@gmail.com" class="contact-link">
+                <div class="icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="link-label">Email</p>
+                  <p class="mono link-value">godet.sylvain.apa@gmail.com</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); var n=this.elements.name.value, e=this.elements.email.value, m=this.elements.message.value; window.location.href='mailto:godet.sylvain.apa@gmail.com?subject=Contact depuis le site - '+n+'&body='+encodeURIComponent(m)+'%0A%0AEmail: '+e;">
+            <input type="text" name="name" required placeholder="Votre nom">
+            <input type="email" name="email" required placeholder="Votre email">
+            <input type="tel" name="phone" placeholder="Votre téléphone (optionnel)">
+            <textarea name="message" required rows="4" placeholder="Décrivez votre projet ou vos objectifs..."></textarea>
+            <button type="submit" class="btn-primary" style="justify-content:center">Envoyer un message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p>Brink of Balance</p>
+        <p>Sylvain Godet — Coach Sport Santé &amp; Nutrition</p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+33783604139">07 83 60 41 39</a>
+        <a href="mailto:godet.sylvain.apa@gmail.com">Email</a>
+        <a href="https://wa.me/33783604139" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
